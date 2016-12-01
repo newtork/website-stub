@@ -1,0 +1,75 @@
+title0 = Simple Page
+title1 = The Template for
+title2 = Simple Pages.
+
+button_request = Functions
+button_order = Requests
+
+footer_disclaimer = Disclaimer
+footer_copy = &copy; 2016 <a href="http://newtork.github.io">newtork</a>
+
+article0_title = Static HTML
+article0_title_post = 
+article0_paragraph0 = The advantage of a static HTML website is quite obvious: Compatibility. On almost every device capable to browse the internet, this website can be displayed and used in the exact same manner, even while being offline, all the information stays available.
+article0_paragraph1 = No scripting, no asynchronous reloading, no cookies, no external assets and no special effects.
+
+article1_title = Translations
+article1_title_post = 
+article1_paragraph0 = Now you could save a static HTML file for every language you are offering. However, since many web servers already support PHP, it is adviced to simply use a <a href="https://en.wikipedia.org/wiki/Internationalization_and_localization">i18n</a>-file.
+article1_paragraph1 = Having one or more of these file (see <i>/languages</i> directory), the contents will be readable in multiple translated languages. The file <i>/templates/sites.html</i> represents the actual template including all placeholders.
+
+
+
+post0_title = CSS instead of JavaScript
+post0_title_post = 
+post0_paragraph0 = Having a user change the contents is usually achieved by a classic hyperlink or by using a script. A less common technique is using CSS. By having suitable styles, you can hide <i>passive</i> content and display the <i>active</i> one. The content to be displayed is "activated" as soon as the anchor in the current URL corresponds to the <i>id</i> attribute of the layer element.
+post0_paragraph1 = However, there is one constraint in the <a href="http://newtork.github.io/">current version</a> of this template: All content pages, which are not "active" at the beginning, must have at least the same vertical length as the landing page. Otherwise, an activated content page will not completely "overlap" the underlying start page.
+
+post1_title = User inputs
+post1_title_post = 
+post1_paragraph0 = An important feature of this template is the possibility of storing user inputs. For this purpose, there are simple selection fields (<i>radioboxes</i>) as well as input fields for single line and multiple lines.
+post1_paragraph1 = After the form has submitted, the data is sent to <i>/index.php</i>, where the script verifies an extra security token and then stores the information to a <i>log.request.txt</i> text file.
+
+sent_title = Thank you for the message
+sent_paragraph0 = We have received your request and will answer as soon as possible.
+sent_paragraph1 = Please click <a href="">here</a> to return.
+
+
+
+form_info = Notice:
+form_sent = Thank you for your message.
+form_continue = Continue.
+
+
+form_paragraph0 = Please choose the type of your message:
+form_paragraph1 = Who are you? And what do you want?
+
+form_subject0 = message
+form_subject1 = application
+form_subject2 = complaint
+
+form_title = User inputs
+form_name = Your name: *
+form_location = Location:
+form_skill = Competence:
+form_year = Year of birth:
+
+form_receiver = Receiver:
+form_subject = Subject:
+form_message = Content:
+form_notification = Required fields are marked with *.
+form_send = Submit
+
+
+
+imprint_title = Imprint
+imprint_paragraph0 = Forename Surname<br />Company Position
+imprint_paragraph1 = Organisation Unit<br />Suborganisation Unit
+imprint_paragraph2 = Details to Office<br /> Street and Zip Code<br /> Telephone Number and Fax Number <br /> Website
+
+
+disclaimer_title = Disclaimer
+disclaimer_paragraph0 = All the information on this website is published in good faith and for general information purpose only. The company does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website, is strictly at your own risk.  The company will not be liable for any losses and/or damages in connection with the use of our website.
+disclaimer_paragraph1 = From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone ‘bad’.
+disclaimer_paragraph2 = Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their “Terms of Service” before engaging in any business or uploading any information.
+disclaimer_paragraph3 = Consent<br />By using our website, you hereby consent to our disclaimer and agree to its terms.

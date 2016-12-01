@@ -1,0 +1,77 @@
+title0 = Simple Page
+title1 = Die Vorlage für
+title2 = einfache Seiten.
+
+button_request = Funktion
+button_order = Eingaben
+
+footer_disclaimer = Impressum
+footer_copy = &copy; 2016 <a href="http://newtork.github.io">newtork</a>
+
+article0_title = Statisches HTML
+article0_title_post = 
+article0_paragraph0 = Der Vorteil an einer statischen HTML-Seite liegt auf der Hand: Kompatibilität. Auf nahezu allen internetfähigen Geräten dieser Welt lässt sich diese Webseite darstellen, sogar offline heruntergeladen sind sämtliche Informationen vorliegend.
+article0_paragraph1 = Kein Scripting, kein asynchrones Nachladen, keine Cookies, keine externen Inhalte, keine Bewegung und keine Effekte.
+
+article1_title = Übersetzungen
+article1_title_post = 
+article1_paragraph0 = Nun könnte man je angebotene Sprache eine eigene statische HTML-Datei hinterlegen. Da jedoch viele Webserver von Hause aus PHP bereits unterstützen, bietet sich eine <a href="https://de.wikipedia.org/wiki/Internationalisierung_(Softwareentwicklung)">i18n</a>-Datei an.
+article1_paragraph1 = Mit Hilfe einer oder mehrere dieser Dateien (unter dem <i>/languages</i> Ordner) lassen sich sämtliche Inhalte einfach übersetzt einbinden. Die Datei <i>/templates/sites.html</i> stellt die eigentliche Vorlage mit allen Platzhaltern dar.
+
+
+
+post0_title = CSS statt JavaScript
+post0_title_post = 
+post0_paragraph0 = Einen Wechsel der Inhalte auf Knopfdruck erzielt man in der Regel entweder durch einen klassischen Hyperlink oder mittels JavaScript. Weniger gebräuchlich ist jedoch der Einsatz von CSS. Durch geeignete <i>Styles</i> lässt sich <i>passiver</i> Inhalt ausblenden und <i>aktiver</i> Inhalt einblenden. Der einzublendende Inhalt ist dann "aktiviert", sobald der Linkanker in der aktuellen URL dem <i>id</i>-Attribut des Layerelements entspricht.
+post0_paragraph1 = Eine Bedingung hat die <a href="http://newtork.github.io/">aktuelle Version</a> des Templates jedoch: Sämtliche Inhaltsseiten, die zu Beginn nicht "aktiv" sind, müssen mindestens die selbe vertikale Länge haben, wie die Startseite. Andernfalls "überlappt" eine aktivierte Inhaltsseite die darunterliegende Startseite nicht vollständig.
+
+post1_title = Eingabeformular
+post1_title_post = 
+post1_paragraph0 = Ein zentraler Punkt des Templates ist die Möglichkeit des Speicherns von Nutzereingaben. Hierfür wurden Einfachauswahlen (<i>Radiobox</i>) sowie Eingabefelder für Einzeiler und Mehrzeiler realisiert.
+post1_paragraph1 = Nach erfolgter Formulareingabe, werden die Daten an <i>/index.php</i> versendet, wo das Script einen beigefügten Sicherheitswert überprüft und dann die Daten in eine <i>log.request.txt</i> abgespeichert.
+
+
+sent_title = Vielen Dank für Ihre Nachricht
+sent_paragraph0 = Wir haben Ihre Daten erhalten und werden Ihnen so bald wie möglich antworten.
+sent_paragraph1 = Klicken Sie <a href="">hier</a> um zurück zu kehren.
+
+
+
+form_info = Hinweis:
+form_sent = Vielen Dank für ihre Anfrage.
+form_continue = Weiter.
+
+
+form_paragraph0 = Bitte wählen Sie die Art ihrer Eingabe:
+form_paragraph1 = Wer sind Sie? Und was wollen Sie?
+
+form_subject0 = Mitteilung
+form_subject1 = Bewerbung
+form_subject2 = Beschwerde
+
+form_title = Benutzereingaben
+form_name = Dein Name: *
+form_location = Wohnort:
+form_skill = Fähigkeit:
+form_year = Geburtsjahr:
+
+form_receiver = Empfänger:
+form_subject = Betreff:
+form_message = Nachricht:
+form_notification = Felder, die mit * gekennzeichnet sind, sind Pflichtfelder.
+form_send = Senden
+
+
+
+imprint_title = Impressum
+imprint_paragraph0 = Vorname Name<br />Position in der Firma
+imprint_paragraph1 = Organisationseinheit<br />Untereinheit
+imprint_paragraph2 = Haus- und Raumangabe<br /> Straße und Adresse<br /> Telefonnummer und Faxnummer <br /> Webseite
+
+
+disclaimer_title = Datenschutzerklärung
+disclaimer_paragraph0 = Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+disclaimer_paragraph1 = Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.
+disclaimer_paragraph2 = Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
+disclaimer_paragraph3 = Sie haben das Recht, auf Antrag unentgeltlich Auskunft zu erhalten über die personenbezogenen Daten, die über Sie gespeichert wurden. Zusätzlich haben Sie das Recht auf Berichtigung unrichtiger Daten, Sperrung und Löschung Ihrer personenbezogenen Daten, soweit dem keine gesetzliche Aufbewahrungspflicht entgegensteht.
+
