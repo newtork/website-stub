@@ -15,3 +15,5 @@ And when using PHP:
  - security token when sending data to fight bots/spam
  - *i18n* - see the "/languages" directory
  
+
+If you are interested in the static page file, please just use the *save* feature of your browser.
