@@ -76,7 +76,7 @@ if(isset($_POST["form"])) {
 			$logFile = LOG_PREFIX . $_POST["action"] . LOG_SUFFIX;
 			file_put_contents($logFile, $logText, FILE_APPEND | LOCK_EX);
 
-			echo '<html><head><META http-equiv="refresh" content="0;URL="></head><body>...</body></html>';
+			echo '<html><head><META http-equiv="refresh" content="0;URL=#sent"></head><body>...</body></html>';
 			exit;
 
 			break;

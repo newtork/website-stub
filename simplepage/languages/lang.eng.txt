@@ -32,7 +32,7 @@ post1_paragraph1 = After the form has submitted, the data is sent to <i>/index.p
 
 sent_title = Thank you for the message
 sent_paragraph0 = We have received your request and will answer as soon as possible.
-sent_paragraph1 = Please click <a href="">here</a> to return.
+sent_paragraph1 = Please click <a href="#start">here</a> to return.
 
 
 
