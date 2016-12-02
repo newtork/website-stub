@@ -5,4 +5,4 @@ Here you can find some approaches to website designs, usually smaller homepages 
 ### Overview ###
 
  - [Simple Page](/simplepage) [[demo](http://newtork.de/simplepage/)]
- - [Paper Page](/paper) [[demo](http://newtork.de/paperpage/)]
+ - [Paper Page](/paperpage) [[demo](http://newtork.de/paperpage/)]
