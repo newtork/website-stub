@@ -105,17 +105,6 @@ a{
 
 
 
-#flip > .page > .front .box:after {
-	background: url('../images/strike.png');
-	background-repeat: repeat-x;
-	height: 1.3em;
-	bottom: -0.1em;
-	left: 1em;
-	right: 1em;
-	opacity: 0.7;
-	content: ' ';
-	background-size: contain;
-}
 #flip > .page > .front .box.wh-page:after {
 	display:none;
 }
@@ -183,16 +172,30 @@ a{
 #flip > .page .front .outer {
 	overflow: visible;
 }
+
+
+
+
+#flip > .page .outer .content .inner .bookmark,
+#flip > .page .outer .content .inner .bookmark:before,
+#flip > .page .outer .content .inner .bookmark:after  {
+	height: 2.5em;
+	line-height: 1.5em;
+	font-weight: bold;
+	font-size: 2.5vh;
+	font-family: 'Aramisi';
+	text-transform: uppercase;
+}
+	
 #flip > .page .outer .content .inner .bookmark {
 	position: absolute;
 	left: 100%;
 	background: url('../images/bookmark13.png') repeat-x;
 	background-size: contain;
-	background-position: 0px -5px;
+	background-position: 0px -4px;
 	bottom: 0em;
 	top: auto;
 	text-align: center;
-	line-height: 1.5em;
 	margin: 0 0 0 -2px;
 	transform: rotate(-90deg);
 	-webkit-transform: rotate(-90deg);
@@ -204,14 +207,8 @@ a{
 	display: block;
 	word-wrap: normal;
 	min-width: 4.5em;
-	padding: 0px 0.6em 0 -0;
+	padding: 0 0.6em 0 0;
 	white-space: nowrap;
-	height: 2.5em;
-	color: #333;
-	font-weight: bold;
-	font-size: 2.5vh;
-	font-family: 'Aramisi';
-	text-transform: uppercase;
 }
 #flip > .page .outer .content .inner .bookmark:before {
 	content: ' ';
@@ -221,7 +218,6 @@ a{
 	background-size: contain;
 	background-position: right -5px;
 	width: 3.4em;
-	height: 2.4em;
 }
 #flip > .page .outer .content .inner .bookmark:after {
 	content: ' ';
@@ -231,8 +227,8 @@ a{
 	background-size: contain;
 	background-position: -0.8em -5px;
 	width: 2.7em;
-	height: 2.4em;
 }
+
 
 #flip > .page:nth-child(5n+2)  .front .content  .bookmark {
 	bottom: 72%;
