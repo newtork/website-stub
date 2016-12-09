@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Aramisi';
+    src: url(../fonts/aramisi/aramisi.ttf) format('truetype'),
+		 url(../fonts/aramisi/aramisi.woff) format('woff');
+}
+
+
+.box {
+	font-family: 'Aramisi';
+}
