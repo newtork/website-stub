@@ -145,10 +145,11 @@ a{
 #flip .box.box-expanded .box-close {
 	cursor:pointer;
 }
-
+/*
 #flip .box-img-left:after {
 	margin-left:40%;
 }
+*/
 .box {
 	border:0;
 }

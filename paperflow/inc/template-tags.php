@@ -18,7 +18,7 @@ function paperflow_posted_on() {
   $time_string = '<time class="entry-date" datetime="%1$s">%2$s</time>';
   $time_string = sprintf( $time_string,
     esc_attr( get_the_date( 'c' ) ),
-    esc_html( get_the_date() )
+    esc_html( get_the_date( 'd.m.Y') )
   );
 
   $posted_on = sprintf( $time_string );

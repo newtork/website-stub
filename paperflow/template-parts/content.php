@@ -7,11 +7,13 @@
  * @link newtork.de
  * @license GPLv2 or later
  */
+ 
+ 
 
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?>>
-	<?php the_post_thumbnail('full'); ?>
+	<?php the_thumbnail_background("img-feat"); ?>
 
 	<div class="entry__info">
 		<?php the_title( '<h3 class="entry__title">', '</a></h3>' ); ?>

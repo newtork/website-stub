@@ -115,14 +115,29 @@ function paperflow_post_class( $classes ) {
 	$classes[] = 'box';
 	
 	// width
-	$w = get_post_meta( $post->ID, 'paperflow_post_width', true );
-	if( $w && $w>0 )
-	 $classes[] = "w-$w";
+	$pw = get_post_meta( $post->ID, 'paperflow_post_width', true );
+	if( $pw && $pw>0 )
+	 $classes[] = "w-$pw";
  
 	// height
-	$h = get_post_meta( $post->ID, 'paperflow_post_height', true );
-	if( $h && $h>0 )
-	 $classes[] = "h-$h";
+	$ph = get_post_meta( $post->ID, 'paperflow_post_height', true );
+	if( $ph && $ph>0 )
+	 $classes[] = "h-$ph";
+ 
+	// image size
+	$ip = get_post_meta( $post->ID, 'paperflow_post_image_position', true );
+	if( $ip )
+	 $classes[] = "$ip";
+ 
+	// image width
+	$iw = get_post_meta( $post->ID, 'paperflow_post_image_width', true );
+	if( $iw && $iw>0 )
+	 $classes[] = "img-width$iw";
+ 
+	// image height
+	$ih = get_post_meta( $post->ID, 'paperflow_post_image_height', true );
+	if( $ih && $ih>0 )
+	 $classes[] = "img-height$ih";
  
 	return $classes;
 }
@@ -174,7 +189,25 @@ function paperflow_scripts() {
 require get_template_directory() . '/inc/template-tags.php';
 
 
+
+
+
 /**
  * Wordpress Meta Box
  */
 require get_template_directory() . '/post-meta.inc.php';
+
+
+
+function the_thumbnail_background( $classes=null ) {
+	$tag = get_the_post_thumbnail( null, 'full' );
+	
+	// get the url from ... src="URL" ...
+	if($tag && $pos = strpos($tag, "src=")) {
+		$tag = substr($tag, $pos+4);
+		$url = substr($tag, 1, strpos($tag, substr($tag,0,1), 1)-1);
+		
+		$classes = $classes && count($classes) ? 'class="'.(is_array($classes) ? implode(" ", $classes) : $classes).'"' : "";
+		echo "<div $classes style=\"background-image:url('$url');\"></div>";
+	}
+}

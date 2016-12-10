@@ -85,16 +85,50 @@ function paperflow_register_meta_boxes( $meta_boxes ) {
 			
 			// FEATURED IMAGE POSITION
 			array(
-				'name'    => esc_html__( 'Feature image position', $prefix_esc ),
-				'id'      => "{$prefix}post_image_position",
-				'type'    => 'radio',
-				'inline'  => false,
-				'options' => array(
+				'name'        => esc_html__( 'Feature image position', $prefix_esc ),
+				'id'          => "{$prefix}post_image_position",
+				'type'        => 'select',
+				'options'     => array(
 					'' => esc_html__( 'top', $prefix_esc ),
 					'box-img-left' => esc_html__( 'left', $prefix_esc ),
 					'box-img-right' => esc_html__( 'right', $prefix_esc ),
 				),
+				'multiple'    => false,
+				'std'         => '',
+				'desc' => esc_html__( 'Position in relation to the text', $prefix_esc ),
 			),
+			
+			// FEATURED IMAGE HORIZONTAL ALIGNMENT
+			array(
+				'name'        => esc_html__( 'Feature image horizontal alignment', $prefix_esc ),
+				'id'          => "{$prefix}post_image_horizontal",
+				'type'        => 'select',
+				'options'     => array(
+					'' => esc_html__( 'center', $prefix_esc ),
+					'box-img-align-left' => esc_html__( 'left', $prefix_esc ),
+					'box-img-align-right' => esc_html__( 'right', $prefix_esc ),
+				),
+				'multiple'    => false,
+				'std'         => '',
+				'desc' => esc_html__( 'Horizontal focus when cropped', $prefix_esc ),
+			),
+			
+			
+			// FEATURED IMAGE VERTICAL ALIGNMENT
+			array(
+				'name'        => esc_html__( 'Feature image vertical alignment', $prefix_esc ),
+				'id'          => "{$prefix}post_image_vertical",
+				'type'        => 'select',
+				'options'     => array(
+					'' => esc_html__( 'center', $prefix_esc ),
+					'box-img-align-top' => esc_html__( 'top', $prefix_esc ),
+					'box-img-align-bottom' => esc_html__( 'bottom', $prefix_esc ),
+				),
+				'multiple'    => false,
+				'std'         => '',
+				'desc' => esc_html__( 'Vertical focus when cropped', $prefix_esc ),
+			),
+			
 			
 			
 			// FEATURED IMAGE WIDTH
