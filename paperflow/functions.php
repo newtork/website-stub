@@ -24,7 +24,7 @@ function paperflow_setup() {
   load_theme_textdomain( 'paperflow', get_template_directory() . '/languages' );
 
   // Add default posts and comments RSS feed links to head.
-  add_theme_support( 'automatic-feed-links' );
+  // add_theme_support( 'automatic-feed-links' );
 
   /*
    * Let WordPress manage the document title.
@@ -34,6 +34,19 @@ function paperflow_setup() {
    */
   add_theme_support( 'title-tag' );
 
+  
+  /*
+   * Enable support for custom document background.
+   */
+  $args = array(
+	'default-color' => '000000',
+	'default-image' => '%1$s/images/background.jpg',
+	'default-repeat' => 'no-repeat',
+	'default-size' => 'cover',
+  );
+  add_theme_support( 'custom-background', $args );
+
+  
   /*
    * Enable support for Post Thumbnails on posts and pages.
    */
@@ -139,6 +152,11 @@ function paperflow_post_class( $classes ) {
 	if( $ih && $ih>0 )
 	 $classes[] = "img-height$ih";
  
+	// image height
+	$me = get_post_meta( $post->ID, 'paperflow_post_media', true );
+	if( $me && $me>0 )
+	 $classes[] = "with-media";
+ 
 	return $classes;
 }
 add_filter( 'post_class', 'paperflow_post_class' );
@@ -199,8 +217,9 @@ require get_template_directory() . '/post-meta.inc.php';
 
 
 
-function the_thumbnail_background( $classes=null ) {
-	$tag = get_the_post_thumbnail( null, 'full' );
+function the_thumbnail_background( $classes=null , $tag=null) {
+	if (!$tag) 
+	 $tag = get_the_post_thumbnail( null, 'full' );
 	
 	// get the url from ... src="URL" ...
 	if($tag && $pos = strpos($tag, "src=")) {
