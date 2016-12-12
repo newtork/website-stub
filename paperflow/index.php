@@ -17,7 +17,7 @@ if(have_posts()) {
 	// get all the categories from the database
 	$cats = get_categories( array(
 		'hide_empty'	=> true,
-		'parent'		=> 2,
+		'parent'		=> get_cat_ID('paperflow'),
 		'order'			=> 'ASC',
 		'oderby'		=> 'slug',
 	)); 
