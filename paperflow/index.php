@@ -13,11 +13,12 @@ get_header();
 
 if(have_posts()) {
 
+	$id = get_cat_ID('paperflow');
 
 	// get all the categories from the database
 	$cats = get_categories( array(
 		'hide_empty'	=> true,
-		'parent'		=> get_cat_ID('paperflow'),
+		'parent'		=> $id,
 		'order'			=> 'ASC',
 		'oderby'		=> 'slug',
 	)); 

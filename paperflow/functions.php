@@ -217,16 +217,33 @@ require get_template_directory() . '/post-meta.inc.php';
 
 
 
+// get the url from ... src="URL" ...
+function thb_attr($thb_x, $a) {
+	if ($pos = strpos($thb_x, $a."=")) {
+		$h = substr($thb_x, $pos+strlen($a)+1);
+		return substr($h, 1, strpos($h, substr($h,0,1), 1)-1);
+	}
+}
 function the_thumbnail_background( $classes=null , $tag=null) {
 	if (!$tag) 
 	 $tag = get_the_post_thumbnail( null, 'full' );
-	
-	// get the url from ... src="URL" ...
-	if($tag && $pos = strpos($tag, "src=")) {
-		$tag = substr($tag, $pos+4);
-		$url = substr($tag, 1, strpos($tag, substr($tag,0,1), 1)-1);
+ 
+	if($tag && $url = thb_attr($tag, "src")) {
+		// sanitize classes array
+		if($classes && count($classes)) {
+			if(!is_array($classes))
+				$classes = array($classes);
+		}
+		else
+			$classes = array();
 		
-		$classes = $classes && count($classes) ? 'class="'.(is_array($classes) ? implode(" ", $classes) : $classes).'"' : "";
+		$w = thb_attr($tag, "width");
+		$h = thb_attr($tag, "height");
+		if($w && $h) {
+			array_push($classes, "width-$w", "height-$h", "ratio-".ceil($w>$h?$w/$h:$h/$w), ($w>=$h ? "horizontal" : "vertical"));
+		}
+		
+		$classes = 'class="'.implode(" ", $classes).'"';
 		echo "<div $classes style=\"background-image:url('$url');\"></div>";
 	}
 }

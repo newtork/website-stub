@@ -67,7 +67,10 @@
 						<span><?php echo get_bloginfo( 'description', 'display' ); ?></span>
 					</h1>
 					<div class="f-cover-story">
-						<?php echo the_custom_logo(); ?>
+						<?php 						
+						$thumbnail = get_custom_logo();
+						the_thumbnail_background("img-feat", $thumbnail);
+						?>
 						<span>Time to straighten up your Latin</span>
 						I've used a lot of lorem ipsum from now on.
 					</div>
